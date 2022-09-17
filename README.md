@@ -1,14 +1,14 @@
 <div align="center">
-<img src="https://i.imgur.com/nQXcXUG.png" width="500" alt="lowcord.js">
+<img src="https://i.imgur.com/nQXcXUG.png" width="100" alt="lowcord.js">
 </div>
 
-#Info
-lowcordjs collection it is a data structure library that you can store anything you want
+# Info
+<h4>lowcordjs collection it is a data structure library that you can store anything you want!</h4>
 
-#Setup & Installation
-Requires node v16.2.0 or newer
+# Setup & Installation
+<h4>Requires node v16.2.0 or newer</h4>
 
-```
+```sh-session
 npm i @lowcordjs/collection
 yarn add @lowcordjs/collection
 ```
