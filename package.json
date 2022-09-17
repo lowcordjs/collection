@@ -1,0 +1,42 @@
+{
+  "name": "@lowcordjs/collection",
+  "version": "1.0.0",
+  "description": "it is a data structure library that you can store anything you want",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lowcordjs/collection.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build":"tsc"
+  },
+  "keywords": [
+    "collection",
+    "lowcord",
+    "lowcordjs",
+    "lowcordjs collection",
+    "map",
+    "hashmap"
+  ],
+  "author": "dagermohamed",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^18.7.18",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "eslint": "^8.23.1",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": ">=16.2.0"
+  }
+}
