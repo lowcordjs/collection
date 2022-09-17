@@ -1,10 +1,10 @@
 {
   "name": "@lowcordjs/collection",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "it is a data structure library that you can store anything you want",
   "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+
+  "types": "dist",
   "repository": {
     "type": "git",
     "url": "https://github.com/lowcordjs/collection.git"
