@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Errors } from './errors';
 export class Collection<K, V> extends Map<K, V> {
     constructor() {
@@ -14,12 +15,13 @@ export class Collection<K, V> extends Map<K, V> {
      * ```
      * @returns Collection
      */
-    public filter(func: Function): Collection<K, V> {
+    public filter(func: (value: V, key: K) => any): Collection<K, V> {
         if (typeof func !== 'function')
             throw new TypeError(Errors.functionParam);
         const db = new Collection<K, V>();
+        
         for (const [key, value] of this) {
-            func(key, value) ? db.set(key, value) : null;
+            func(value, key) ? db.set(key, value) : null;
         }
         return db;
     }
@@ -32,11 +34,11 @@ export class Collection<K, V> extends Map<K, V> {
      * ```
      * 
      */
-    public search(func: Function): V | undefined {
+    public search(func: (value: V, key: K) => any): V | undefined {
         if (typeof func !== 'function')
             throw new TypeError(Errors.functionParam);
         for (const [key, value] of this) {
-            if (func(key, value)) return value;
+            if (func(value, key)) return value;
         }
         return undefined;
     }
@@ -49,12 +51,12 @@ export class Collection<K, V> extends Map<K, V> {
      * ```
      * 
      */
-    public map(func: Function): Collection<K, V> {
+    public map(func: (value: V, key: K) => any): Collection<K, V> {
         if (typeof func !== 'function')
             throw new TypeError(Errors.functionParam);
         const mapRes = new Collection<K, V>();
         for (const [key, value] of this) {
-            mapRes.set(key, func(value));
+            mapRes.set(key, func(value,key));
         }
         return mapRes;
     }
